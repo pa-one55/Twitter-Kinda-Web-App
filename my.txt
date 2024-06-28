@@ -1,0 +1,35 @@
+app desc :  
+    - we'll create users
+    - users can write post
+
+functions : 
+    - login, logout, register
+    - post creation
+    - post like
+    - post delete ( only to the owner )
+
+
+packages : 
+    express
+    mongoose
+    bcrypt 
+    jsonwebtoken 
+    cookie-parser
+    ejs
+
+
+
+extra :
+- added error handling - wrong entries in the form, empty fields and all
+- handeled the case when user directly tries to access the profile page
+   - in this case there is no cookie to begin with 
+   - so just added that case
+- added 'register' button on login page, in case a new user comes directly at the login page
+- added login on register page
+- added delete a post feature
+
+issue faced : 
+    - the post was showing in my DB, but the post array in the userProfile was empty
+    - wrong syntaxt -> <% user.username %>
+    correct syntaxt -> <%= user.username %>
+    forgot to put that `=` sign
